@@ -1,0 +1,125 @@
+! ------------------------------------------------------------------------------
+! Colour Configuration
+! ------------------------------------------------------------------------------
+
+!* Dracula Xresources palette
+!*.foreground: #F8F8F2
+!*.background: #080808
+!*.color0:     #000000
+!*.color8:     #4D4D4D
+!*.color1:     #FF5555
+!*.color9:     #FF6E67
+!*.color2:     #50FA7B
+!*.color10:    #5AF78E
+!*.color3:     #F1FA8C
+!*.color11:    #F4F99D
+!*.color4:     #BD93F9
+!*.color12:    #CAA9FA
+!*.color5:     #FF79C6
+!*.color13:    #FF92D0
+!*.color6:     #8BE9FD
+!*.color14:    #9AEDFE
+!*.color7:     #BFBFBF
+!*.color15:    #E6E6E6
+
+! special
+!*.foreground:   #ABB2BF
+!*.background:   #0d111c
+!*.cursorColor:  #ABB2BF
+!
+!! black
+!*.color0:       #0d111c
+!*.color8:       #3E4452
+!
+!! red
+!*.color1:       #f02c35
+!*.color9:       #BE5046
+!
+!! green
+!*.color2:       #05f25a
+!*.color10:      #98C379
+!
+!! yellow
+!*.color3:       #ffb047
+!*.color11:      #D19A66
+!
+!! blue
+!*.color4:       #407dff
+!*.color12:      #61AFEF
+!
+!! magenta
+!*.color5:       #c91fff
+!*.color13:      #C678DD
+!
+!! cyan
+!*.color6:       #3cd9ed
+!*.color14:      #56B6C2
+!
+!! white
+!*.color7:       #b9bbc0
+!*.color16:      #5C6370
+
+
+
+!== BREWER DARK COLOR SCHEME ==!
+! special
+*.foreground:   #b7b8b9
+*.background:   #0c0d0e
+*.cursorColor:  #b7b8b9
+
+! black
+*.color0:       #0c0d0e
+*.color8:       #737475
+
+! red
+*.color1:       #E33234
+*.color9:       #E33234
+
+! green
+*.color2:       #31a354
+*.color10:      #31a354
+
+! yellow
+*.color3:       #dca060
+*.color11:      #dca060
+
+! blue
+*.color4:       #3182bd
+*.color12:      #3182bd
+
+! magenta
+*.color5:       #756bb1
+*.color13:      #756bb1
+
+! cyan
+*.color6:       #80b1d3
+*.color14:      #80b1d3
+
+! white
+*.color7:       #b7b8b9
+*.color15:      #fcfdfe
+
+! ------------------------------------------------------------------------------
+! Font configuration
+! ------------------------------------------------------------------------------
+
+!URxvt.font:					xft:Hack:bold:size=12, xft:Font\ Awesome\ 5\ Free:solid:size=12
+URxvt.font:					xft:Iosevka:medium:size=12 
+URxvt*boldFont:				xft:Hack:bold:size=12
+URxvt*italicFont:			xft:Hack:italic:size=12
+URxvt*boldItalicFont: 		xft:Hack:italic:size=12
+
+XTerm*background:           #0d111c
+XTerm*facename:             Iosevka
+
+! ------------------------------------------------------------------------------
+! Xft Font Configuration
+! ------------------------------------------------------------------------------
+
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+

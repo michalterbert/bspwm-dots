@@ -1,0 +1,76 @@
+{
+    //Remove minimap
+    "editor.minimap.enabled": false,
+    //Remove php autocomplete beacause I use intelliphense
+    "php.suggest.basic": false,
+    //Set font family and size
+    "editor.fontFamily": "'Iosevka', 'Operator Mono', 'monospace', monospace",
+    "window.zoomLevel": -1,
+    "editor.fontSize": 20,
+    "editor.lineHeight": 24,
+    //Turn off word based suggestions
+    "editor.wordBasedSuggestions": false,
+    //Set appearance
+    "workbench.colorTheme": "Ayu Dark Bordered",
+    "workbench.iconTheme": "material-icon-theme",
+    //Remove confirmation pop-up when deleting a file or a folder
+    "explorer.confirmDelete": false,
+    //Binds jj to act as escape for exiting insert mode
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<esc>"
+            ]
+        }
+    ],
+    "terminal.integrated.rendererType": "dom",
+    //Set cursor blinks to make it look better
+    "editor.cursorBlinking": "smooth",
+    //Remove unused newlines
+    "files.trimFinalNewlines": true,
+    "editor.renderFinalNewline": false,
+    //Disable menu bar
+    "window.menuBarVisibility": "toggle",
+    //Override colors to make it look better
+    "workbench.colorCustomizations": {
+        "sideBar.background": "#0d111c",
+        "sideBar.foreground": "#ffffff",
+        "editor.background": "#0d111c",
+        "editor.lineHighlightBackground": "#1b212b",
+        "sideBarSectionHeader.background": "#0d111c",
+        "sideBarSectionHeader.foreground": "#fff",
+        "activityBar.border": "#000d111c",
+        "activityBar.background": "#1B212B",
+        "statusBar.background": "#0F1421",
+        "editorGroupHeader.tabsBackground": "#1B212B",
+        "tab.activeBackground": "#252D3B",
+        "tab.inactiveBackground": "#1B212B",
+        "scrollbarSlider.activeBackground": "#252d3b",
+        "scrollbarSlider.hoverBackground": "#252d3b",
+        "statusBar.noFolderBackground": "#0d111c",
+        "statusBar.debuggingBackground": "#0d111c",
+        "panel.background": "#0d111c"
+    },
+    //Turn off activity bar
+    "workbench.activityBar.visible": false,
+    //Set relative line number
+    "editor.lineNumbers": "relative",
+    //"editor.glyphMargin": false,
+    // Is git enabled
+    "git.enabled": false,
+    // Path to the git executable
+    "git.path": null,
+    // Whether auto fetching is enabled.
+    "git.autofetch": false,
+    "editor.fontLigatures": true,
+    "terminal.integrated.fontWeight": "bold",
+    "workbench.startupEditor": "newUntitledFile",
+    "emmet.triggerExpansionOnTab": true,
+    "files.autoSaveDelay": 10000,
+    "breadcrumbs.enabled": false,
+    "editor.fontWeight": "400",
+}
