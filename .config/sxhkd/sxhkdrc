@@ -1,0 +1,130 @@
+### APP KEYDINDS ###
+
+# Launch Terminal
+super + Return
+	st
+
+# Launch Terminal With Tmux
+super + shift + Return
+	st -e tmux attach
+
+# Take Screenshot
+Print
+	~/Scripts/scrot.sh
+
+# Launch Visual Studio Code - OSS
+super + c
+	code-oss
+
+# Launch dmenu
+super + d
+	dmenu_run -p "Run Command : "
+
+# Launch Music Pop Up
+super + s
+	st -f Iosevka:size=10 -c music -e ncmpcpp 
+
+# Open Firefox
+super + w
+	firefox
+
+# Open Vivaldi
+super + shift + w
+	firefox
+
+# Launch Pcmanfm
+super + shift + f
+	pcmanfm
+
+
+### WINDOW MANAGER SHORTCUT ###
+
+# Control Volume
+XF86AudioRaiseVolume
+    amixer -D default -q sset Master 2%+
+XF86AudioLowerVolume
+    amixer -D default -q sset Master 2%-
+XF86AudioMute
+    amixer -D default -q sset Master toggle
+
+# Control Brightness
+XF86MonBrightnessUp
+	xbacklight -inc 5
+XF86MonBrightnessDown
+	xbacklight -dec 5
+
+# Reload SXHKD
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# Quit or Restart BSWPM
+super + shift + {q,r}
+	bspc {quit,wm -r}
+
+# Toggle Layout
+super + m
+	bspc desktop -l next
+
+# Change Wallpaper Using PyWal
+super + alt + {1,2,3,4}
+	wal -i ~/Pictures/Alto/alto{1,2,3,4}.png -b 0d111c
+
+# Launch Powermenu
+super + shift + x
+	~/Scripts/powermenu
+
+# Close Window
+super + q
+	bspc node -c
+
+# Restore Gaps
+super + equal
+	bspc config -d focused window_gap 12
+
+# Remove Gaps
+super + plus
+	bspc config -d focused window_gap 0
+
+# Swap to Biggest Window in Current Workspace
+super + g
+	bspc node -s biggest.local
+
+#
+# state/flags
+#
+
+# Set Window State
+super + {t,shift + t,f,0}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# Change Focus Between Tiled Window or Move Them
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# Change Focus Between Local Window
+super + {_,shift + }n
+	bspc node -f {next,prev}.local
+
+# Switch Focus Between Current and Last Workspaces
+super + Tab
+	bspc desktop -f last
+
+# Focus or Send Window to Other Workspaces
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# Preselect Window Spawn Direction
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# preselect the ratio
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# Change Window Size
+super + alt + {h,j,k,l}
+	bspc node -z {right -20 0,bottom 0 20,bottom 0 -20,right 20 0}
+
+# Move Floating Window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}

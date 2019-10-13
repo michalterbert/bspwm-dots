@@ -1,0 +1,12 @@
+#!/bin/sh
+
+options="Nothing\nReboot\nShutdown"
+
+selected=$(echo -e "$options" | dmenu -i -p "Select Action :")
+
+case "$selected" in 
+    Nothing) ;;
+    Reboot) reboot ;;
+    Shutdown) shutdown now ;;
+esac
+

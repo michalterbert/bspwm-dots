@@ -100,17 +100,50 @@
 *.color15:      #fcfdfe
 
 ! ------------------------------------------------------------------------------
-! Font configuration
+! Terminal configuration
 ! ------------------------------------------------------------------------------
 
-!URxvt.font:					xft:Hack:bold:size=12, xft:Font\ Awesome\ 5\ Free:solid:size=12
-URxvt.font:					xft:Iosevka:medium:size=12 
-URxvt*boldFont:				xft:Hack:bold:size=12
-URxvt*italicFont:			xft:Hack:italic:size=12
-URxvt*boldItalicFont: 		xft:Hack:italic:size=12
+URxvt.font:					xft:Iosevka\ Nerd\ Font:style=medium:size=12
+URxvt.boldFont:				xft:Iosevka\ Nerd\ Font:style=bold:size=12
+URxvt.italicFont:			xft:Iosevka\ Nerd\ Font:style=italic:size=12
+URxvt.boldItalicFont: 		xft:Iosevka\ Nerd\ Font:style=italic:size=12
 
-XTerm*background:           #0d111c
-XTerm*facename:             Iosevka
+URxvt.scrollBar: 		    false
+URxvt.scrollBar_right: 		false
+URxvt.iso14755:             false
+URxvt.urgentOnBell:         true
+URxvt.cursorBlink:          true
+
+!!URxvt.background:           rgba:0013/0017/0028/ffaa
+URxvt.background:           [88]#0d111c
+URxvt.borderColor:          [88]#0d111c
+URxvt.saveLine:             2048
+URxvt.depth:                32
+URxvt.internalBorder:       8
+URxvt.letterSpace:          0
+URxvt.lineSpace:            0
+
+!! Common Keybinds for Navigations
+URxvt.keysym.M-k: command:\033]720;1\007
+URxvt.keysym.M-j: command:\033]721;1\007
+URxvt.keysym.Control-Up: \033[1;5A
+URxvt.keysym.Control-Down: \033[1;5B
+URxvt.keysym.Control-Right: \033[1;5C
+URxvt.keysym.Control-Left: \033[1;5D
+
+!! Copy Paste & Other Extensions
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
+URxvt.copyCommand: xclip -i -selection clipboard
+URxvt.pasteCommand: xclip -o -selection clipboard
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.urlLauncher: firefox
+URxvt.underlineURLs: true
+URxvt.urlButton: 1
 
 ! ------------------------------------------------------------------------------
 ! Xft Font Configuration

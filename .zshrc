@@ -10,13 +10,15 @@ export EDITOR=nvim
 #prompt pure
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="/home/dicha/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+#ZSH_THEME="powerlevel9k/powerlevel9k"
 ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="norm"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -101,28 +103,42 @@ export LANG=en_US.UTF-8
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-#
+
+
 # Aliases goes here
 alias neo="pfetch"
 alias pls="sudo"
 alias music="mpd && mpc add / && ncmpcpp"
 alias play="ncmpcpp"
 alias localhost="cd /srv/http/"
+alias pipes="/home/dicha/Documents/scripts/pipes"
 alias tt="trizen"
+alias mc="java -jar /home/dicha/Games/TLauncher-2.66.jar"
+alias server="sudo systemctl start httpd; systemctl start mysqld"
 alias vim="nvim"
 alias die="shutdown now"
+alias irrellia="cd /home/dicha/Website\ Stuff/irrellia.github.io/"
 alias wifilist="nmcli d wifi list"
 alias img="viewnior"
 alias polyconf="nvim ~/.config/polybar/config"
 alias bspwmconf="nvim ~/.config/bspwm/bspwmrc"
 alias keyconf="nvim ~/.config/sxhkd/sxhkdrc"
 alias ta="tmux attach"
+alias tn="tmux new zsh"
+alias v="nvim ~/Scripts/welcome"
+alias dotdrop="/home/dicha/Git\ Repos/dotdrop/dotdrop.sh --cfg=/home/dicha/Git\ Repos/dotdrop/config.yaml"
+
+# Additional Config
+_comp_options+=(globdots) #include dot files
+
+# VIM binding in completion
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
 
 #Powerlevel config
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
-#POWERLEVEL9K_HOME_ICON=' '
-#POWERLEVEL9K_HOME_ICON='\ue0f5'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
